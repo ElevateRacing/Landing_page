@@ -233,7 +233,7 @@ nav {
 }
 
 .content1-header h1 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: clamp(2.5rem, 5vw, 4rem);
     color: #000000;
@@ -298,7 +298,7 @@ nav {
 .p2 {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 900;
-    font-size: clamp(1.25rem, 3vw, 3rem);
+    font-size: clamp(1rem, 2.75vw, 2.75rem);
     margin-bottom: 5px;
 }
 
