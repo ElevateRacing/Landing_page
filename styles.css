@@ -251,12 +251,13 @@ nav {
 
 .content1-desktop {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr; /* Added third row */
+    grid-template-rows: repeat(3, auto);
     grid-template-columns: 1fr 2fr 1fr;
-    height: calc(100% - 150px); /* Adjust for header text */
+    /* height: calc(100% - 150px); /* Adjust for header text */
     width: 100%;
     position: relative;
     z-index: 2;
+    padding-bottom: 40px;
 }
 
 .content1-row {
@@ -347,8 +348,8 @@ nav {
         align-items: center;
         position: relative;
         z-index: 2;
-        height: calc(100% - 130px); /* Adjust for header text */
-        padding: 20px;
+        /* height: calc(100% - 130px); /* Adjust for header text */
+        padding-bottom: 40px;
     }
 
     .content1-mobile-image {
