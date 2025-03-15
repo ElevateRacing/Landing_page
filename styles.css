@@ -1,0 +1,422 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400&display=swap');
+
+html {scroll-behavior: smooth;}
+
+/* CSS Variables for consistent styling */
+:root {
+    --secondary-color: #FFFFFF;
+    --background-light: #F5F5F5;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-hover: #e0e0e0; /* Light grey for modern hover */
+}
+
+/* Reset and base styles */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    background-color: var(--background-light);
+    font-family: 'Open Sans', Arial, sans-serif;
+    overflow-x: hidden;}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - Header styles - - - - - - */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2000;}
+.top-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    padding: 10px;
+    height: 70px;
+    border-radius: 8px;
+    margin: 20px 10px;
+    position: relative;
+    justify-content: space-between;}
+.logo2 {
+    height: 50px;
+    width: auto;
+    flex-shrink: 0;}
+.logo1 {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    transition: left 0.3s ease, opacity 0.2s ease; /* Smooth movement */
+    opacity: 1;}
+nav {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;}
+.header-btn {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    border-radius: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;}
+.header-btn:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.02); /* Slight scale-up for modern feel */}
+
+@media (max-width: 768px) {
+    nav {display: none;} /* Hides nav buttons on mobile */
+    .top-box {
+        justify-content: flex-start;
+        padding: 10px 5px;
+        align-items: center;
+        position: relative;
+        overflow: visible;
+        max-width: 100%;}
+    .logo2 {
+        height: 35px;
+        max-height: 50px;
+        max-width: 45%;
+        margin-right: 10px;
+        object-fit: contain;
+        flex-shrinking: 0;}
+    .logo1 {
+        height: 40px;
+        max-height: 50px;
+        max-width: 45%;
+        position: absolute;
+        opacity: 1;
+        object-fit: contain;
+        flex-shrinking: 0;}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - Hero section - - - - - - */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 90px 0 0 0;
+    z-index: 1000;
+    overflow: hidden;}
+.hero-content {
+    text-align: left;
+    color: var(--secondary-color);
+    padding: 20px 30px;
+    max-width: 900px;
+    z-index: 1100;
+    margin: 20% 0 0 5%;
+    position: relative;}
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Test16.png') no-repeat center center/cover;
+    background-position: 50% 20%;
+    z-index: 999; /* Below content */}
+.hero-content h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: clamp(2rem, 3.5vw, 4rem); /* Min: 32px, Preferred: 3.5vw, Max: 64px */
+    font-weight: 700;
+    line-height: 1.1; /* Tighter for a bold, impactful look */
+    margin: 0 0 12px 0;}
+.hero-content h2 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: clamp(1.25rem, 2vw, 2rem); /* Min: 20px, Preferred: 2vw, Max: 32px */
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 16px 0;}
+.hero-text {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.125rem); /* Min: 16px, Preferred: 1.5vw, Max: 18px */
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0; /* Clean up spacing */}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;
+        width: 100%;
+        background-position: 50% 20%;
+        padding: 90px 0 0 0;
+        position: relative;
+        display: block;}
+    .hero-content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        padding: 15px 20px;
+        width: 90%;
+        max-width: 900px;
+        margin: 0;
+        padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+        box-sizing: border-box;
+        top: auto;}
+    .hero-background {
+        background-position: 50% 20%;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 100%;}
+    .hero-content h1 {
+        font-size: clamp(1.75rem, 6vw, 3rem);
+        line-height: 1.2;
+        margin-bottom: 10px;}
+    .hero-content h2 {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        margin-bottom: 12px;}
+    .hero-text {
+        font-size: clamp(0.875rem, 2.5vw, 1rem);
+        line-height: 1.5;}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - Content1 section - - - - - - */
+.content1-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;}
+/* Content1 Left Section */
+.content1-left {
+    width: 50%;
+    background-color: var(--background-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;}
+.content1-left h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;}
+.content1-text-swap-container {
+    position: relative;
+    min-height: 120px; /* Fixed height to keep layout stable */
+    width: 100%;
+    max-width: 500px;}
+.text-swap {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-weight: 400;
+    line-height: 1.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Already in your CSS */}
+.text-swap.active {
+    opacity: 1;}
+.content1-text {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 20px 0;}
+.desktop-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff6200;
+    border-radius: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    cursor: pointer; /* Ensure clickable appearance */
+    box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3); /* Subtle orange shadow for depth */}
+.desktop-btn:hover {
+    background-color: #ff7f33;
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5); /* Enhanced shadow on hover */}
+/* Content1 Right Section */
+.content1-right {
+    width: 50%;
+    position: relative;
+    overflow: hidden;}
+.content1-SliderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;}
+.content1-slide:nth-child(1) .content1-SliderImage {
+    object-position: 40% 50%; /* Forest image */}
+.content1-slide:nth-child(2) .content1-SliderImage {
+    object-position: 30% 50%; /* Bridge image */}
+.content1-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease; /* Already in your CSS */}
+.content1-slide.active {
+    opacity: 1;}
+.content1-SliderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;}
+.content1-SliderImage[data-bg-position="center center"] { object-position: center center; }
+.content1-mobileTextBtn {
+    display: none; /* Hide on desktop */}
+/* Dots Navigation */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent grey */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;}
+.dot.active {
+    background-color: #FFFFFF; /* White for active */
+    transform: scale(1.2);}
+.dot:hover {
+    transform: scale(1.1);}
+
+@media (max-width: 768px) {
+    .content1-section {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%}
+    .content1-left {display: none;}
+    .content1-right {
+        width: 100%;
+        height: 100%; /* Full height of section */
+        display: flex;
+        flex-direction: column;}
+    .content1-mobile-top {
+        height: 50%; /* Top half */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--background-light);
+        padding: 20px;
+        overflow: hidden;}
+    .content1-mobile-top h2 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: clamp(1.75rem, 6vw, 3rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 5px;
+        margin-top: 30px;}
+    .content1-TextSwapContainerMobileTextSwap {
+        position: relative;
+        width: 100%; /* Full width of container */
+        max-width: 90%; /* Prevent text from hitting edges */
+        flex-grow: 1; /* Allow it to take available space */
+        display: flex; /* Ensure proper stacking */
+        align-items: center; /* Center dynamic text vertically */
+        justify-content: center; /* Center dynamic text horizontally */
+        min-height: 50px; /* Minimum height to avoid collapse */
+        margin: 0;}
+    .mobile-text-swap {
+        position: absolute;
+        top: 50%; /* Center vertically within container */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Precise centering */
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: clamp(0.875rem, 2.5vw, 1rem);
+        line-height: 1.5;}
+    .mobile-text-swap.active {
+        opacity: 1;}
+    .content1-static-text {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: clamp(0.875rem, 2.5vw, 1rem); /* Match mobile text size */
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000; /* Ensure visibility */
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 30px;}
+    .content1-mobile-bottom {
+        height: 50%; /* Bottom half */
+        position: relative;
+        overflow: hidden;
+        background-color: #000;}
+    .content1-ImageSlider {
+        width: 100%; /* Full width of container */
+        height: 100%;
+        position: relative;}
+    .content1-slide {
+        width: 100%; /* Each slide fills viewport */
+        height: 100%;
+        position: absolute; /* Stack slides */
+        top: 0;
+        left: 0;
+        transition: transform 0.5s ease;
+        transform: translateX(100%);}
+    .content1-slide.active {
+        transform: translateX(0);}
+    .content1-SliderImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;}
+    .mobile-btn {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #ffffff; /* White text for contrast against orange */
+        background-color: #ff6200; /* Vibrant modern orange */
+        border-radius: 12px;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+        width: auto;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3); /* Subtle orange shadow for depth */
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%) !important;
+        z-index: 12;
+        display: inline-block;}
+    .dots-container {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        z-index: 11;}
+}
+
+@media (min-width: 769px) {
+    #mobileReserveBtn {
+        display: none;}
+    .content1-TextSwapContainerMobileTextSwap {
+        display: none;}
+    .mobile-text-swap {
+        display: none;}
+    .content1-mobile-top {
+        display: none;}
+}
