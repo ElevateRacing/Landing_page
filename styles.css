@@ -268,7 +268,7 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 30px;
+    padding: 20px 10px;
 }
 
 .content1-cell.left {
