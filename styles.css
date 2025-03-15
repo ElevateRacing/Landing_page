@@ -252,7 +252,7 @@ nav {
 .content1-desktop {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1.75fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     height: calc(100% - 150px); /* Adjust for header text */
     width: 100%;
     position: relative;
