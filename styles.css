@@ -402,7 +402,7 @@ nav {
     .content1-mobile-text .p3 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-size: clamp(0.875rem, 2.25vw, 1rem);
         color: #000000;
     }
 
