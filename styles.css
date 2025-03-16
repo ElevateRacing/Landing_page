@@ -456,14 +456,8 @@ nav {
         color: white;
         border: none;
         cursor: pointer;
-    }
-
-    .left-section .button {
-        left: 20px;
-    }
-
-    .right-section .button {
-        right: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
 /* - - - - - - Content3 Section - - - - - - */
