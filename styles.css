@@ -430,7 +430,8 @@ nav {
         background-color: #f0f0f0;
         position: relative;
         display: flex;
-        justify-content: center;
+        flex-direction: column; /* Changed to column to stack text and image */
+        justify-content: space-between; /* Distributes space between elements */
         align-items: center;
     }
 
@@ -446,7 +447,29 @@ nav {
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
-}
+    }
+
+    .top-text {
+        position: relative; /* Keeps it above the AirKart image */
+        padding-top: 60px; /* 60px from top */
+        text-align: center;
+        font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
+        font-size: 18px; /* Consistent with your previous text sizes */
+        color: black; /* Matches your previous text color */
+        max-width: 80%; /* Prevents text from getting too wide */
+        z-index: 2; /* Ensures it’s above the AirKart */
+    }
+
+    .bottom-text {
+        position: relative; /* Keeps it above the AirKart image */
+        padding-bottom: 60px; /* 60px from bottom */
+        text-align: center;
+        font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
+        font-size: 18px; /* Consistent with your previous text sizes */
+        color: black; /* Matches your previous text color */
+        max-width: 80%; /* Prevents text from getting too wide */
+        z-index: 2; /* Ensures it’s above the AirKart */
+    }
 
     .button {
         position: absolute;
