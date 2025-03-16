@@ -418,6 +418,7 @@ nav {
         display: flex;
         height: 100vh;
         overflow: hidden;
+        width: 100%;
     }
 
     .left-section, .right-section {
@@ -429,6 +430,8 @@ nav {
         flex: 1;
         background-color: #f0f0f0;
         position: relative;
+        width: 100%;
+        min-width: 0;
     }
 
     .left-section img, .right-section img {
@@ -449,28 +452,26 @@ nav {
     .content2-top-text {
         position: absolute;
         top: 60px; /* 60px from top */
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         text-align: center;
         font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
         font-size: 18px; /* Consistent with your previous text sizes */
         color: black; /* Matches your previous text color */
-        max-width: 95%; /* Prevents text from getting too wide */
-        padding: 0 10px;
+        margin: 0 10px;
         z-index: 2; /* Ensures it’s above the AirKart */
     }
 
     .content2-bottom-text {
         position: absolute;
         bottom: 60px; /* 60px from bottom */
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         text-align: center;
         font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
         font-size: 18px; /* Consistent with your previous text sizes */
         color: black; /* Matches your previous text color */
-        max-width: 95%; /* Prevents text from getting too wide */
-        padding: 0 10px;
+        margin: 0 10px;
         z-index: 2; /* Ensures it’s above the AirKart */
     }
 
