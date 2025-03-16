@@ -475,9 +475,7 @@ nav {
 
     .top-section {
         background-color: #f0f0f0;
-        padding: 20px;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding: 80px 10px 80px 10px;
         width: 100%;
     }
 
@@ -492,7 +490,7 @@ nav {
 
     .bottom-section {
         background-color: #333333;
-        padding: 20px;
+        padding: 20px 10px;
         width: 100%;
     }
 
