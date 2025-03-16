@@ -129,7 +129,7 @@ nav {
 /* - - - - - - Hero Section - - - - - - */
 .hero-section {
     display: flex;
-    height: 100hv;
+    height: 100vh;
     align-items: center;
     justify-content: flex-start;
     position: relative;
