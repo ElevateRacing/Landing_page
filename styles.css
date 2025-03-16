@@ -462,7 +462,7 @@ nav {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 600;
         font-size: 1rem;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, scale 0.2s ease;
         display: inline-block;
         width: auto;
         text-align: center;
@@ -472,7 +472,7 @@ nav {
 
     .button:hover {
         background-color: var(--orange-hover);
-        transform: scale(1.02);
+        scale: 1.02;
         box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5); /* Enhanced shadow on hover */
     }
 
