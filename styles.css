@@ -442,7 +442,7 @@ nav {
 
     .Airkart {
         position: absolute;
-        width: 150%; /* Makes it wider than the middle section */
+        width: 130%; /* Makes it wider than the middle section */
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
