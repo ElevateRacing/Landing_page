@@ -452,13 +452,28 @@ nav {
         position: absolute;
         bottom: 20px;
         padding: 10px 20px;
-        background-color: #333;
-        color: white;
-        border: none;
         cursor: pointer;
         left: 50%;
         transform: translateX(-50%);
-    }
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #ff6200;
+        border-radius: 12px;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3); /* Subtle orange shadow for depth */}
+        /* border: none; */
+
+        .button:hover {
+            background-color: #ff7f33;
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5); /* Enhanced shadow on hover */}
+        }
 
 /* - - - - - - Content3 Section - - - - - - */
     .content3-section {
