@@ -360,7 +360,6 @@ nav {
         align-items: center;
         position: relative;
         z-index: 2;
-        /* height: calc(100% - 130px); /* Adjust for header text */
         padding: 20px;
         padding-bottom: 60px;
         gap: 20px;
@@ -384,7 +383,7 @@ nav {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 400; /* Normal weight by default */
         font-size: clamp(1rem, 2vw, 1.5rem);
-        color: var(--secondary-color);
+        color: #000000;
         margin-bottom: 8px;
     }
 
@@ -394,9 +393,9 @@ nav {
 
     .content1-mobile-text .p2 {
         font-family: 'Open Sans', Arial, sans-serif;
-        font-weight: 400;
+        font-weight: 700;
         font-size: clamp(1.25rem, 3vw, 1.5rem);
-        color: var(--secondary-color);
+        color: #000000;
         margin-bottom: 5px;
     }
 
@@ -404,7 +403,7 @@ nav {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
         font-size: clamp(1rem, 2.5vw, 1.25rem);
-        color: var(--secondary-color);
+        color: #000000;
     }
 
     /* Reduce width of bottom three texts in mobile */
