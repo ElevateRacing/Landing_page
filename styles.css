@@ -455,7 +455,7 @@ nav {
         font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
         font-size: 18px; /* Consistent with your previous text sizes */
         color: black; /* Matches your previous text color */
-        max-width: 90%; /* Prevents text from getting too wide */
+        max-width: 95%; /* Prevents text from getting too wide */
         z-index: 2; /* Ensures it’s above the AirKart */
     }
 
@@ -468,7 +468,7 @@ nav {
         font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
         font-size: 18px; /* Consistent with your previous text sizes */
         color: black; /* Matches your previous text color */
-        max-width: 90%; /* Prevents text from getting too wide */
+        max-width: 95%; /* Prevents text from getting too wide */
         z-index: 2; /* Ensures it’s above the AirKart */
     }
 
