@@ -257,6 +257,7 @@ nav {
     position: relative;
     z-index: 2;
     padding-bottom: 60px;
+    gap: 20px;
 }
 
 .content1-row {
@@ -269,6 +270,7 @@ nav {
     justify-content: flex-start;
     align-items: center;
     padding: 20px 10px;
+    min-hight: 0;
 }
 
 .content1-cell.left {
@@ -314,7 +316,8 @@ nav {
 
 .content1-image {
     max-width: 100%;
-    max-height: 100%;
+    /* x-height: 100%; */
+    height: auto;
     object-fit: contain;
 }
 
@@ -351,6 +354,7 @@ nav {
         /* height: calc(100% - 130px); /* Adjust for header text */
         padding: 20px;
         padding-bottom: 60px;
+        gap: 20px;
     }
 
     .content1-mobile-image {
@@ -364,6 +368,7 @@ nav {
     .content1-mobile-text {
         text-align: center;
         margin-bottom: 20px;
+        width: 100%;
     }
 
     .content1-mobile-text .p1 {
