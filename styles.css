@@ -441,29 +441,75 @@ nav {
     }
 
     .Airkart {
-            position: absolute;
-            width: 150%; /* Makes it wider than the middle section */
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-    }
+        position: absolute;
+        width: 150%; /* Makes it wider than the middle section */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+}
 
     .button {
-            position: absolute;
-            bottom: 20px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
+        position: absolute;
+        bottom: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
     }
 
     .left-section .button {
-            left: 20px;
+        left: 20px;
     }
 
     .right-section .button {
-            right: 20px;
+        right: 20px;
     }
 
 /* - - - - - - Content3 Section - - - - - - */
+    .content3-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-section {
+        background-color: #f0f0f0;
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .top-text {
+        color: black;
+        text-align: center;
+        max-width: 800px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .bottom-section {
+        background-color: #333333;
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-text {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        max-width: 800px;
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+
+
+/* - - - - - - Content4 Section - - - - - - */
