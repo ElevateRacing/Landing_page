@@ -442,13 +442,13 @@ nav {
         width: 115%; /* Makes it wider than the middle section */
         left: 50%;
         top: 50%;
-        transform: translateX(-50%, -50%);
+        transform: translate(-50%, -50%);
         z-index: 1;
     }
 
     .content2-top-text {
         position: absolute;
-        padding-top: 60px; /* 60px from top */
+        top: 60px; /* 60px from top */
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
@@ -461,7 +461,7 @@ nav {
 
     .content2-bottom-text {
         position: absolute;
-        padding-bottom: 60px; /* 60px from bottom */
+        bottom: 60px; /* 60px from bottom */
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
