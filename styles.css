@@ -483,7 +483,7 @@ nav {
     }
 
     .top-section {
-        background-color: #f0f0f0;
+        background-color: var(--background-light);
         padding: 80px 10px 80px 10px;
         width: 100%;
     }
