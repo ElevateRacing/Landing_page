@@ -429,10 +429,6 @@ nav {
         flex: 1;
         background-color: #f0f0f0;
         position: relative;
-        display: flex;
-        flex-direction: column; /* Changed to column to stack text and image */
-        justify-content: space-between; /* Distributes space between elements */
-        align-items: center;
     }
 
     .left-section img, .right-section img {
@@ -445,13 +441,16 @@ nav {
         position: absolute;
         width: 115%; /* Makes it wider than the middle section */
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translateX(-50%, -50%);
         z-index: 1;
     }
 
     .content2-top-text {
-        position: relative; /* Keeps it above the AirKart image */
+        position: absolute;
         padding-top: 60px; /* 60px from top */
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
         font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
         font-size: 18px; /* Consistent with your previous text sizes */
@@ -461,8 +460,10 @@ nav {
     }
 
     .content2-bottom-text {
-        position: relative; /* Keeps it above the AirKart image */
+        position: absolute;
         padding-bottom: 60px; /* 60px from bottom */
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
         font-family: 'Montserrat', Arial, sans-serif; /* Montserrat font */
         font-size: 18px; /* Consistent with your previous text sizes */
