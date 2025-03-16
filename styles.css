@@ -414,3 +414,56 @@ nav {
 }
 
 /* - - - - - - Content2 Section - - - - - - */
+    .content2-section {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .left-section, .right-section {
+        flex: 1;
+        position: relative;
+    }
+
+    .middle-section {
+        flex: 1;
+        background-color: #f0f0f0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-section img, .right-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Airkart {
+            position: absolute;
+            width: 150%; /* Makes it wider than the middle section */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+    }
+
+    .button {
+            position: absolute;
+            bottom: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+    }
+
+    .left-section .button {
+            left: 20px;
+    }
+
+    .right-section .button {
+            right: 20px;
+    }
+
+/* - - - - - - Content3 Section - - - - - - */
