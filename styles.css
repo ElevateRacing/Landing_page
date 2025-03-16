@@ -468,7 +468,7 @@ nav {
 
 /* - - - - - - Content3 Section - - - - - - */
     .content3-section {
-        width: fit-content;
+        width: 100%;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
@@ -478,6 +478,7 @@ nav {
         background-color: #f0f0f0;
         padding: 20px;
         padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .top-text {
