@@ -394,7 +394,7 @@ nav {
     .content1-mobile-text .p2 {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 700;
-        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        font-size: clamp(1.5rem, 3.25vw, 1.75rem);
         color: #000000;
         margin-bottom: 5px;
     }
