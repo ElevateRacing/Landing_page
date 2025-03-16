@@ -442,7 +442,7 @@ nav {
 
     .Airkart {
         position: absolute;
-        width: 130%; /* Makes it wider than the middle section */
+        width: 110%; /* Makes it wider than the middle section */
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
@@ -468,18 +468,16 @@ nav {
 
 /* - - - - - - Content3 Section - - - - - - */
     .content3-section {
-        min-height: 100vh;
+        width: fit-content;
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
     }
 
     .top-section {
         background-color: #f0f0f0;
         padding: 20px;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        padding-top: 80px;
     }
 
     .top-text {
@@ -494,10 +492,6 @@ nav {
     .bottom-section {
         background-color: #333333;
         padding: 20px;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .bottom-text {
