@@ -449,7 +449,7 @@ nav {
         z-index: 1;
     }
 
-    .top-text {
+    .content2-top-text {
         position: relative; /* Keeps it above the AirKart image */
         padding-top: 60px; /* 60px from top */
         text-align: center;
@@ -460,7 +460,7 @@ nav {
         z-index: 2; /* Ensures it’s above the AirKart */
     }
 
-    .bottom-text {
+    .content2-bottom-text {
         position: relative; /* Keeps it above the AirKart image */
         padding-bottom: 60px; /* 60px from bottom */
         text-align: center;
