@@ -466,14 +466,14 @@ nav {
         display: inline-block;
         width: auto;
         text-align: center;
-        box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3); /* Subtle orange shadow for depth */}
+        box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3); /* Subtle orange shadow for depth */
         border: none;
     }
 
     .button:hover {
         background-color: var(--orange-hover);
         transform: scale(1.02);
-        box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5); /* Enhanced shadow on hover */}
+        box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5); /* Enhanced shadow on hover */
     }
 
 /* - - - - - - Content3 Section - - - - - - */
