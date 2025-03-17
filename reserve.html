@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Your Airkart - Elevate Racing</title>
+    <meta name="description" content="Discover AirKart by Elevate Racing, the ultimate eVTOL for personal flight and racing."/>
+    <meta name="keywords" content="AirKart, eVTOL, Elevate Racing, personal flight"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="preload" href="Images/Reserve.png" as="image"/>
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400&display=swap');
+        html {scroll-behavior: smooth;}
+        /* CSS Variables for consistent styling */
+        :root {--secondary-color: #FFFFFF; --background-light: #F5F5F5; --shadow-color: rgba(0, 0, 0, 0.1); --button-hover: #e0e0e0;}
+        /* Reset and base styles */
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {background-color: var(--background-light); font-family: 'Open Sans', Arial, sans-serif; overflow-x: hidden;}
+        /* - - - - - - - - - - - - - - - - - - - - - - - - - - Header styles - - - - - - */
+        header {width: 100%; position: fixed; top: 0; z-index: 2000;}
+        .top-box {display: flex; align-items: center; background-color: var(--secondary-color); box-shadow: 0 2px 4px var(--shadow-color); padding: 10px; height: 70px; border-radius: 8px; margin: 20px 10px; position: relative; justify-content: space-between;}
+        .logo2 {height: 50px; width: auto; flex-shrink: 0;}
+        .logo1 {height: 50px; width: auto; position: absolute; transition: left 0.3s ease, opacity 0.2s ease; opacity: 1;}
+        nav {display: flex; gap: 10px; flex-shrink: 0;}
+        .header-btn {padding: 8px 16px; text-decoration: none; color: #000000; background-color: transparent; border-radius: 12px; font-family: 'Montserrat', Arial, sans-serif; font-weight: 600; font-size: 1rem; transition: background-color 0.3s ease, transform 0.2s ease; white-space: nowrap;}
+        .header-btn:hover {background-color: var(--button-hover); transform: scale(1.02);}
+        @media (max-width: 768px) {
+            nav {display: none;} /* Hides nav buttons on mobile */
+            .top-box {justify-content: flex-start; padding: 10px 5px; align-items: center; position: relative; overflow: visible; max-width: 100%;}
+            .logo2 {height: 35px; max-height: 50px; max-width: 45%; margin-right: 10px; object-fit: contain; flex-shrinking: 0;}
+            .logo1 {height: 40px; max-height: 50px; max-width: 45%; position: absolute; opacity: 1; object-fit: contain; flex-shrinking: 0;}
+        }
+
+        .reserve-section {
+            display: flex;
+            min-height: calc(100vh - 110px);
+            max-height: calc(100vh - 110px);
+            margin-top: 110px;
+            background-color: #F5F5F5;
+            overflow: hidden;}
+        .reserve-left {
+            flex: 0 0 50%; /* Changed to 50% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;}
+        .reserve-content {
+            text-align: center;
+            width: 100%;
+            margin: 0 40px;}
+        .reserve-content h2 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: clamp(2rem, 3.5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;}
+        .reserve-content p {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+            font-weight: 400;
+            line-height: 1.6;
+            margin: 0 0 20px 0;}
+        .reserve-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;}
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 15px;}
+        .reserve-form label {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: clamp(0.875rem, 1vw, 1rem);
+            margin-bottom: 5px;
+            text-align: left;}
+        .reserve-form input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;}
+        .custom-btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ff6200;
+            border-radius: 12px;
+            border: none;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3); /* Subtle orange shadow for depth */}
+            max-width: 400px;
+            margin-top: 10px;}
+        .custom-btn:hover {
+            background-color: #ff7f33;
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5);}
+        .reserve-right {
+            flex: 0 0 50%; /* Changed to 50% */
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;}
+        .reserve-image {
+            height: 100%; /* Fill available height */
+            width: 100%; /* Let width adjust naturally */
+            max-height: calc(100vh - 110px); /* Match section height */
+            object-fit: cover; /* Trim sides if needed */
+            object-position: 50% 50%;}
+        @media (max-width: 768px) {
+            .reserve-section {
+                flex-direction: column;
+                margin-top: 90px;
+                min-height: auto;
+                max-height: none;
+                overflow-y: auto;}
+            .reserve-left {
+                flex: none;
+                width: 100%;
+                padding: 20px;
+                overflow-y: visible;}
+            .reserve-right {
+                flex: none;
+                width: 100%;
+                padding: 0;}
+            .reserve-image {
+                width: 100%;
+                height: auto;
+                max-height: none;
+                object-fit: cover;}
+            .reserve-content {
+                padding-top: 20px;
+                margin: 0 20px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-box">
+            <img src="logo2.png" alt="AirKart Logo" class="logo2" onerror="this.src='fallback-logo.png'">
+            <img src="logo1.png" alt="Elevate Racing Logo" class="logo1" onerror="this.src='fallback-logo.png'">
+            <nav>
+                <a href="index.html" class="header-btn">Home</a>
+                <a href="book.html" class="header-btn">Book a Flight</a>
+                <a href="index.html#contact-section" class="header-btn">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="reserve-section">
+    <div class="reserve-left">
+        <div class="reserve-content">
+            <h2>Reserve Your AirKart</h2>
+            <p>Production start is planned in 2026 and first deliveries estimated early 2027. Secure your place in line today. AirKart will be ready for collection in one of our training zones after completing comprehensive training for $199,000.</p>
+            <p>One of our Sales team members will contact you as soon as possible to discuss future payments and delivery details.</p>
+            <p>Secure your place in line today.</p>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="reserve-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="custom-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="reserve-right">
+        <img src="Images/Reserve.png" alt="AirKart reservation preview image" class="reserve-image">
+    </div>
+</main>
+
+
+
+    
+    <script>
+        // - - - - - - LOGO ADJUSTMENT SCRIPT - - - - - -
+        const topBox = document.querySelector('.top-box');
+        const logo1 = document.querySelector('.logo1');
+        const logo2 = document.querySelector('.logo2');
+        const nav = document.querySelector('nav');
+
+        function adjustLogos() {
+            // Only adjust logo1 on desktop (whwn nav is visible)
+            const boxWidth = topBox.offsetWidth;
+            
+            if (window.innerWidth > 768) {
+                // Get widths and positions
+                const logo2Width = logo2.offsetWidth;
+                const logo1Width = logo1.offsetWidth;
+                const navWidth = nav.offsetWidth;
+                const navLeft = boxWidth - navWidth - 10; // Left edge of nav
+                const centerFullBox = boxWidth / 2;
+                const leftBoundary = logo2Width + 20; // After logo2 + buffer
+                const rightBoundary = navLeft - 20; // Before nav + buffer
+                const availableSpace = rightBoundary - leftBoundary;
+
+                // Check if nav or logo2 encroached on logo1's centered position
+                const logo1LeftEdge = centerFullBox - (logo1Width / 2);
+                const logo1RightEdge = centerFullBox + (logo1Width / 2);
+
+                if (logo1RightEdge > rightBoundary || logo1LeftEdge < leftBoundary) {
+                    // Step 2: Center in available space if encroachment
+                    if (availableSpace < logo1Width) {
+                        // Step 3: Not enough space, hide logo1
+                        logo1.style.opacity = '0';
+                    } else {
+                        // Center in available space
+                        const centerAvailable = leftBoundary + (availableSpace / 2);
+                        logo1.style.opacity = '1';
+                        logo1.style.left = centerAvailable + 'px';
+                        logo1.style.transform = 'translateX(-50%)';
+                    }
+                } else {
+                    // No encroachment, center in full box
+                    logo1.style.opacity = '1';
+                    logo1.style.left = '50%';
+                    logo1.style.transform = 'translateX(-50%)';
+                }
+            } else {
+                // Mobile logic
+                // Ensure images are loaded before calculating width
+                if (logo2.complete && logo1.complete) {
+                    const logo2Width = logo2.offsetWidth || 0;
+                    const logo1Width = logo1.offsetWidth || 0;
+                    const padding = 20; // 10px left + 10px right
+                    const availableWidth = boxWidth - padding;
+
+                    // Center logo1 in the available space after logo2
+                    const spaceAfterLogo2 = boxWidth - logo2Width - padding;
+                    const centerPoint = logo2Width + (spaceAfterLogo2 / 2);
+                    const logo1Left = Math.max(logo2Width + 10, Math.min(centerPoint, boxWidth - logo1Width - 10));
+                    
+                    logo1.style.left = logo1Left + 'px';
+                    logo1.style.transform = 'translateX(-50%)';
+                    logo1.style.opacity = '1';
+
+                    // Scale down logos if combined width exceeds available space
+                    const totalLogoWidth = logo2Width + logo1Width;
+                    if (totalLogoWidth > availableWidth) {
+                        const scaleFactor = availableWidth / totalLogoWidth;
+                        logo2.style.width = (logo2Width * scaleFactor) + 'px';
+                        logo1.style.width = (logo1Width * scaleFactor) + 'px';
+                    } else {
+                        // Reset widths if previously scaled
+                        logo2.style.width = '';
+                        logo1.style.width = '';
+                    }
+                } else {
+                    // Fallback if images aren't loaded yet
+                    logo1.style.left = '50%'; // Temporary center
+                    logo1.style.transform = 'translateX(-50%)';
+                    logo1.style.opacity = '1';
+                }
+            }
+        }
+                    
+        // Run on load, resize, and after images load
+        window.addEventListener('load', adjustLogos);
+        window.addEventListener('resize', adjustLogos);
+        logo1.addEventListener('load', adjustLogos);
+        logo2.addEventListener('load', adjustLogos);
+    // - - - - - - END OF LOGO ADJUSTMENT SCRIPT - - - - - -
+
+    </script>
+</body>
+</html>
