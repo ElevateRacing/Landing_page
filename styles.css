@@ -503,6 +503,10 @@ nav {
         box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5); /* Enhanced shadow on hover */
     }
 
+    .content2-text1, .content2-text2 {
+        display: none; /* Hidden on desktop */
+    }
+
     @media (max-width: 768px) {
         .content2-section {
             flex-direction: column;
@@ -537,27 +541,12 @@ nav {
             display: none; /* Hide middle section (AirKart image and text) on mobile */
         }
 
-        .content2-section::after {
-            content: "Secure your own AirKart for $199,000 or rent one for just $249 with a 15-minute flight at our AirKarting Tracks – no pilot’s license needed in selected countries!";
+        .content2-text1, .content2-text2 {
             display: block;
             background-color: var(--background-light); /* Light grey */
             color: black;
             font-family: 'Montserrat', Arial, sans-serif;
             font-size: 18px;
-            text-align: center;
-            padding: 40px 20px;
-            width: 100%;
-            line-height: 1.5;
-        }
-
-        .content2-section .right-section::after {
-            content: "Imagine low-altitude flight with the pulse-pounding rush of go-kart racing – an experience like no other.";
-            display: block;
-            background-color: #333333; /* Dark grey */
-            color: white;
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 20px;
-            font-weight: bold;
             text-align: center;
             padding: 40px 20px;
             width: 100%;
