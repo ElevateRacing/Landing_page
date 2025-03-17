@@ -555,6 +555,14 @@ nav {
             z-index: 2;
             line-height: 1.5;
         }
+
+        .left-section .content2-overlay-text {
+            color: white; /* White font for top text on mobile */
+        }    
+
+        .right-section .content2-overlay-text {
+            color: black; /* Black font for bottom text on mobile */
+        }
     }
 
 /* - - - - - - Content3 Section - - - - - - */
