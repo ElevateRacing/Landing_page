@@ -503,7 +503,7 @@ nav {
         box-shadow: 0 6px 16px rgba(255, 98, 0, 0.5); /* Enhanced shadow on hover */
     }
 
-    .content2-text1, .content2-text2 {
+    .content2-overlay-text {
         display: none; /* Hidden on desktop */
     }
 
@@ -541,15 +541,18 @@ nav {
             display: none; /* Hide middle section (AirKart image and text) on mobile */
         }
 
-        .content2-text1, .content2-text2 {
+        .content2-overlay-text {
             display: block;
-            background-color: var(--background-light); /* Light grey */
-            color: black;
+            position: absolute;
+            top: 20px; /* Margin from the top */
+            left: 0;
+            right: 0;
+            text-align: center;
             font-family: 'Montserrat', Arial, sans-serif;
             font-size: 18px;
-            text-align: center;
-            padding: 40px 20px;
-            width: 100%;
+            color: black;
+            margin: 0 20px;
+            z-index: 2;
             line-height: 1.5;
         }
     }
